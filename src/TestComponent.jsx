@@ -10,7 +10,11 @@ class TestComponent extends React.Component {
   }
 
   render() {
-    <h2>Test component</h2>;
+    return (
+      <div>
+        <h2>Test component</h2>
+      </div>
+    );
   }
 }
 

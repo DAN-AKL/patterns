@@ -1,6 +1,20 @@
 {
-  "name": "patterns",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "name": "@dan-akl/patterns",
+  "version": "1.0.1",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "react-dom": "^16.8.2",
+    "react": "^16.8.2",
+    "webpack-cli": "^3.2.3",
+    "webpack": "^4.29.5"
+  }
 }
