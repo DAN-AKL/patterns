@@ -1,0 +1,22 @@
+:root {
+  font-size: 3px;
+  // font-family: 'Averta for TBWA W03';
+
+  @media (min-width: 700px) and (min-height: 700px) {
+    font-size: 4px;
+  }
+
+  @media (min-width: 1000px) and (min-height: 1000px) {
+    font-size: 5px;
+  }
+
+  @media (min-width: 2000px) and (min-height: 1000px) {
+    font-size: 6px;
+  }
+}
+
+body {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}

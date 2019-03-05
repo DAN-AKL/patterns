@@ -4,7 +4,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -15,6 +17,16 @@
     "react-dom": "^16.8.2",
     "react": "^16.8.2",
     "webpack-cli": "^3.2.3",
-    "webpack": "^4.29.5"
+    "webpack": "^4.29.5",
+    "@storybook/react": "^5.0.0",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addons": "^5.0.0"
+  },
+  "dependencies": {
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
   }
 }

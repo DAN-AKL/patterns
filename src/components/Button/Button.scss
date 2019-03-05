@@ -1,0 +1,47 @@
+.btn {
+  align-items: center;
+  border: 2px solid currentColor;
+  color: currentColor;
+  display: inline-flex;
+  font-size: 5rem;
+  font-weight: 800;
+  justify-content: left;
+  line-height: 1;
+  padding: 3rem 5rem;
+  text-align: left;
+  text-decoration: none;
+
+  svg {
+    fill: currentColor;
+    height: 6rem;
+    margin-left: 4rem;
+    margin-top: 0;
+    width: 6rem;
+  }
+}
+
+.btn__text {
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+.btn--small {
+  font-size: 4rem;
+  font-weight: 400;
+  padding: 2rem 3rem;
+}
+
+.btn--primary {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn--secondary {
+  background-color: transparent;
+}
+
+.btn--tertiary {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+}
