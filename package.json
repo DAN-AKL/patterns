@@ -17,6 +17,7 @@
     "@storybook/addon-links": "^5.0.0",
     "@storybook/addons": "^5.0.0",
     "@storybook/react": "^5.0.0",
+    "@svgr/webpack": "^4.1.0",
     "babel-loader": "^8.0.5",
     "babel-preset-env": "^1.7.0",
     "react": "^16.8.2",

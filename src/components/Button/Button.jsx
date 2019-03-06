@@ -4,20 +4,20 @@ import * as PropTypes from 'prop-types'
 
 import './Button.scss'
 
-// import Arrow from '../../images/icons/arrows/arrow-right.svg'
+import { ReactComponent as Arrow }  from '../../images/icons/arrows/arrow-right.svg'
 
 const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   href: PropTypes.string,
-  kind: PropTypes.oneOf(['button', 'anchor']),
+  as: PropTypes.oneOf(['button', 'anchor']),
   onChange: PropTypes.func,
   priority: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   small: PropTypes.bool,
 }
 
 const defaultProps = {
-  kind: 'button',
+  as: 'button',
   priority: 'primary',
 }
 
@@ -37,25 +37,18 @@ class Button extends React.Component {
     const button = (
       <button {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        {/* <Arrow /> */}
+        <Arrow />
       </button>
     )
 
     const anchor = (
       <a href={this.props.href} {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        {/* <Arrow /> */}
+        <Arrow />
       </a>
     )
 
-    // const link = (
-    //   <Link to={this.props.href} {...commonProps}>
-    //     <span className="btn__text">{this.props.children}</span>
-    //     {/* <Arrow /> */}
-    //   </Link>
-    // )
-
-    switch (this.props.kind) {
+    switch (this.props.as) {
       case 'anchor':
         return anchor
         break
@@ -63,10 +56,6 @@ class Button extends React.Component {
       case 'button':
         return button
         break
-
-      // case 'link':
-      //   return link
-      //   break
 
       default:
         return button
