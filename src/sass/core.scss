@@ -1,6 +1,8 @@
+@import './fonts';
+
 :root {
   font-size: 3px;
-  // font-family: 'Averta for TBWA W03';
+  font-family: 'Averta for TBWA W03';
 
   @media (min-width: 700px) and (min-height: 700px) {
     font-size: 4px;
