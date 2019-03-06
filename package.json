@@ -1,10 +1,11 @@
 {
   "name": "@dan-akl/patterns",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
+    "deploy": "yarn build && yarn publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -12,16 +13,16 @@
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "babel-preset-env": "^1.7.0",
-    "react-dom": "^16.8.2",
-    "react": "^16.8.2",
-    "webpack-cli": "^3.2.3",
-    "webpack": "^4.29.5",
-    "@storybook/react": "^5.0.0",
     "@storybook/addon-actions": "^5.0.0",
     "@storybook/addon-links": "^5.0.0",
-    "@storybook/addons": "^5.0.0"
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
   },
   "dependencies": {
     "css-loader": "^2.1.0",
