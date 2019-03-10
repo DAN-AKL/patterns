@@ -1,6 +1,6 @@
 {
   "name": "@dan-akl/patterns",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.0.0",
