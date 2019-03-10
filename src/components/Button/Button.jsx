@@ -9,6 +9,7 @@ import { ReactComponent as Arrow }  from '../../images/icons/arrows/arrow-right.
 const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
   href: PropTypes.string,
   as: PropTypes.oneOf(['button', 'anchor']),
   onChange: PropTypes.func,
@@ -19,6 +20,7 @@ const propTypes = {
 const defaultProps = {
   as: 'button',
   priority: 'primary',
+  disabled: false
 }
 
 class Button extends React.Component {
@@ -28,7 +30,8 @@ class Button extends React.Component {
 
   render() {
     let commonProps = {
-      onChange: this.props.onChange,
+      onClick: this.props.onClick,
+      disabled: this.props.disabled,
       className: `btn btn--${this.props.priority} ${
         this.props.small ? 'btn--small' : ''
       }`,
