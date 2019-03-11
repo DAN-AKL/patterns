@@ -4,14 +4,16 @@ import * as PropTypes from "prop-types";
 
 import "./Button.scss";
 
-import { ReactComponent as Arrow } from "../../images/icons/arrows/arrow-right.svg";
+import Arrow from "../../images/icons/arrows/arrow-right.svg";
+import Chevron from "../../images/icons/arrows/chevron-right.svg";
 
 const propTypes = {
+  as: PropTypes.oneOf(["button", "anchor"]),
   children: PropTypes.node,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   href: PropTypes.string,
-  as: PropTypes.oneOf(["button", "anchor"]),
+  icon: PropTypes.oneOf(["arrow", "chevron"]),
   onChange: PropTypes.func,
   priority: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
   small: PropTypes.bool
@@ -19,8 +21,9 @@ const propTypes = {
 
 const defaultProps = {
   as: "button",
-  priority: "primary",
-  disabled: false
+  disabled: false,
+  icon: "chevron",
+  priority: "primary"
 };
 
 class Button extends React.Component {
@@ -40,14 +43,14 @@ class Button extends React.Component {
     const button = (
       <button {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        <Arrow />
+        <Chevron />
       </button>
     );
 
     const anchor = (
       <a href={this.props.href} {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        <Arrow />
+        <Chevron />
       </a>
     );
 
