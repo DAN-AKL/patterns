@@ -1,7 +1,8 @@
-@import './fonts';
+@import "./fonts";
+@import "./type";
 
 * {
-  font-family: 'Averta for TBWA W03';
+  font-family: "Averta for TBWA W03";
 }
 
 :root {
@@ -20,9 +21,90 @@
   }
 }
 
+::selection {
+  background-color: #fdcc07;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-size: 4rem;
   margin: 0;
   padding: 0;
 }
+
+img,
+svg {
+  vertical-align: bottom;
+}
+
+// @import './core/animation';
+// @import './core/variables';
+// @import './core/mixins';
+// @import './core/type';
+// @import './components/link-list.scss';
+//
+// figure {
+//   width: 100%;
+//
+//   img,
+//   svg {
+//     width: 100%;
+//     height: auto;
+//   }
+// }
+//
+// .section-name {
+//   font-size: 5rem;
+//   text-transform: uppercase;
+// }
+//
+// .hero-image {
+//   margin-top: 0;
+//   display: block;
+// }
+//
+// .developer-warning {
+//   margin-top: 8rem;
+//   background-color: #f003;
+//   padding: 8rem;
+//   font-size: 12rem;
+// }
+//
+// [class*='--dark'] {
+//   & + & {
+//     padding-top: 0;
+//
+//     [class*='container'] {
+//       border-top: 1px solid hsl(0, 0%, 40%);
+//       padding-top: 10rem;
+//     }
+//   }
+// }
+//
+// [class*='--light'] {
+//   & + & {
+//     padding-top: 0;
+//
+//     [class*='container'] {
+//       border-top: 1px solid hsl(0, 0%, 90%);
+//       padding-top: 10rem;
+//     }
+//   }
+// }
+//
+// [class*='--bright'] {
+//   & + & {
+//     padding-top: 0;
+//
+//     [class*='container'] {
+//       border-top: 1px solid hsl(48, 60%, 90%);
+//       padding-top: 10rem;
+//     }
+//   }
+// }

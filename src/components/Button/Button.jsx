@@ -1,31 +1,31 @@
-import React from 'react'
+import React from "react";
 
-import * as PropTypes from 'prop-types'
+import * as PropTypes from "prop-types";
 
-import './Button.scss'
+import "./Button.scss";
 
-import { ReactComponent as Arrow }  from '../../images/icons/arrows/arrow-right.svg'
+import { ReactComponent as Arrow } from "../../images/icons/arrows/arrow-right.svg";
 
 const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   href: PropTypes.string,
-  as: PropTypes.oneOf(['button', 'anchor']),
+  as: PropTypes.oneOf(["button", "anchor"]),
   onChange: PropTypes.func,
-  priority: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  small: PropTypes.bool,
-}
+  priority: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
+  small: PropTypes.bool
+};
 
 const defaultProps = {
-  as: 'button',
-  priority: 'primary',
+  as: "button",
+  priority: "primary",
   disabled: false
-}
+};
 
 class Button extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -33,39 +33,39 @@ class Button extends React.Component {
       onClick: this.props.onClick,
       disabled: this.props.disabled,
       className: `btn btn--${this.props.priority} ${
-        this.props.small ? 'btn--small' : ''
-      }`,
-    }
+        this.props.small ? "btn--small" : ""
+      }`
+    };
 
     const button = (
       <button {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
         <Arrow />
       </button>
-    )
+    );
 
     const anchor = (
       <a href={this.props.href} {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
         <Arrow />
       </a>
-    )
+    );
 
     switch (this.props.as) {
-      case 'anchor':
-        return anchor
-        break
+      case "anchor":
+        return anchor;
+        break;
 
-      case 'button':
-        return button
-        break
+      case "button":
+        return button;
+        break;
 
       default:
-        return button
+        return button;
     }
   }
 }
 
-Button.propTypes = propTypes
+Button.propTypes = propTypes;
 
-export default Button
+export default Button;
