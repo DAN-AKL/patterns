@@ -1,0 +1,96 @@
+@import "../../sass/variables.scss";
+
+.bento {
+  margin-top: 0;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
+.bento--standard {
+  padding-bottom: 24rem;
+  padding-top: 24rem;
+
+  .bento__header + .bento__grid {
+    margin-top: 12rem;
+  }
+}
+
+.bento--compact {
+  padding-bottom: 16rem;
+  padding-top: 16rem;
+
+  .bento__header + .bento__grid {
+    margin-top: 14rem;
+  }
+}
+
+.bento--comfortable {
+  padding-bottom: 32rem;
+  padding-top: 32rem;
+
+  .bento__header + .bento__grid {
+    margin-top: 12rem;
+  }
+}
+
+.bento__container {
+  margin: 0 auto;
+  max-width: 300rem;
+}
+
+.bento__grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  @supports (grid-gap: 1px) {
+    display: grid;
+    grid-column-gap: 6rem;
+    grid-row-gap: 8rem;
+
+    @media (min-width: 700px) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+}
+
+.bento__header {
+  text-align: center;
+}
+
+.bento--bright {
+  background-color: $tbwa-yellow;
+
+  ::selection {
+    background-color: $tbwa-white;
+  }
+}
+
+.bento--dark {
+  background-color: $tbwa-black;
+  color: $tbwa-grey;
+}
+
+.bento--light {
+  background-color: $tbwa-white;
+  color: $tbwa-black;
+}
+
+.bento--grey {
+  background-color: $tbwa-grey;
+  color: $tbwa-black;
+}
+
+.bento__item {
+  & + & {
+    margin-top: 9rem;
+  }
+}
+
+@import "./sass/gallery-overlay";
+@import "./sass/gallery-full-bleed";
+@import "./sass/twoup";
+@import "./sass/threeup";
+@import "./sass/fourup";
+@import "./sass/two-thirds-left";
+@import "./sass/two-thirds-right";
