@@ -56,7 +56,12 @@
 }
 
 .btn--secondary {
-  background-color: hsl(46, 98%, 86%);
+  background-color: hsla(46, 98%, 86%, 0);
+
+  &:hover {
+    background-color: hsla(46, 100%, 48%, 1);
+    color: #000;
+  }
 
   &[disabled] {
     cursor: not-allowed;
