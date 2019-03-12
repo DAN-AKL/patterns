@@ -13,8 +13,6 @@ import {
   select
 } from "@storybook/addon-knobs";
 
-import { action } from "@storybook/addon-actions";
-
 const stories = storiesOf("Bento", module);
 
 stories.addDecorator(withKnobs);
@@ -32,6 +30,7 @@ const layouts = {
   "Four up": "fourup",
   "Two thirds left": "two-thirds-left",
   "Two thirds right": "two-thirds-right",
+  "Gallery single": "gallery-single",
   "Gallery full bleed": "gallery-full-bleed",
   "Gallery overlay": "gallery-overlay"
 };
@@ -56,21 +55,45 @@ stories.add("Default", () => {
         </BentoHeader>
       )}
 
-      <BentoItem>
-        <p>
-          Through research we uncover and design the products and services you
-          can invest in with confidence and shape a strategy for you to deliver
-          those services.
-        </p>
-      </BentoItem>
+      {(layout === "twoup" ||
+        layout === "threeup" ||
+        layout === "fourup" ||
+        layout === "two-thirds-left" ||
+        layout === "two-thirds-right") && (
+        <BentoItem>
+          <p>
+            Through research we uncover and design the products and services you
+            can invest in with confidence and shape a strategy for you to
+            deliver those services.
+          </p>
+        </BentoItem>
+      )}
 
-      <BentoItem>
-        <p>
-          Through research we uncover and design the products and services you
-          can invest in with confidence and shape a strategy for you to deliver
-          those services.
-        </p>
-      </BentoItem>
+      {(layout === "two-thirds-left" ||
+        layout === "two-thirds-right" ||
+        layout === "gallery-single" ||
+        layout === "gallery-full-bleed" ||
+        layout === "gallery-overlay") && (
+        <BentoItem>
+          <img src="https://placeimg.com/1280/600/any" width="100%" />
+        </BentoItem>
+      )}
+
+      {layout === "gallery-overlay" && (
+        <BentoItem>
+          <img src="https://placeimg.com/1280/600/any" width="100%" />
+        </BentoItem>
+      )}
+
+      {(layout === "twoup" || layout === "threeup" || layout === "fourup") && (
+        <BentoItem>
+          <p>
+            Through research we uncover and design the products and services you
+            can invest in with confidence and shape a strategy for you to
+            deliver those services.
+          </p>
+        </BentoItem>
+      )}
 
       {(layout === "threeup" || layout === "fourup") && (
         <BentoItem>

@@ -1,0 +1,11 @@
+.bento__layout--gallery-single {
+  .bento__item {
+    @supports (grid-gap: 1px) {
+      grid-column: 1 / 13;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
