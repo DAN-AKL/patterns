@@ -4,8 +4,8 @@ import * as PropTypes from "prop-types";
 
 import "./Button.scss";
 
-import Arrow from "../../images/icons/arrows/arrow-right.svg";
-import Chevron from "../../images/icons/arrows/chevron-right.svg";
+// import Arrow from "../../images/icons/arrows/arrow-right.svg";
+// import Chevron from "../../images/icons/arrows/chevron-right.svg";
 
 const propTypes = {
   as: PropTypes.oneOf(["button", "anchor"]),
@@ -43,14 +43,14 @@ class Button extends React.Component {
     const button = (
       <button {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        <Chevron />
+        {/* <Chevron /> */}
       </button>
     );
 
     const anchor = (
       <a href={this.props.href} {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        <Chevron />
+        {/* <Chevron /> */}
       </a>
     );
 
