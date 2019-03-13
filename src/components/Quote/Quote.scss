@@ -1,0 +1,25 @@
+.quote {
+}
+.quote__text {
+  font-size: 15rem;
+  font-weight: 800;
+  line-height: 1.4;
+
+  &:before,
+  &:after {
+    content: '"';
+  }
+}
+
+.quote__citation {
+  border-left: 0.5rem solid #000;
+  display: block;
+  font-size: 5rem;
+  margin-top: 4rem;
+  padding-left: 4rem;
+}
+
+.quote__name,
+.quote__role {
+  display: block;
+}
