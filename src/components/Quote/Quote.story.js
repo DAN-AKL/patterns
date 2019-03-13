@@ -11,9 +11,12 @@ stories.addDecorator(withKnobs);
 stories.add("Default", () => {
   return (
     <Quote
-      text="DAN was awesome during our project, I thoroughly enjoyed working with them. Everyone should use them."
-      name="Sarah Lastname "
-      role="Auckland Company Ltd"
+      text={text(
+        "Text",
+        "DAN was awesome during our project, I thoroughly enjoyed working with them. Everyone should use them."
+      )}
+      name={text("Name", "Sarah Lastname")}
+      role={text("Role", "Auckland Company Ltd")}
     />
   );
 });
