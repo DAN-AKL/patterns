@@ -46,6 +46,8 @@ module.exports = {
       },
       {
         test: /\.svg$/,
+        include: /src\/images/,
+        exclude: /src\/fonts/,
         use: [
           {
             loader: "@svgr/webpack",
@@ -60,8 +62,20 @@ module.exports = {
         ]
       },
       {
-        test: /\.(eot|ttf|woff2|woff|svg)$/,
+        test: /\.(svg|eot|otf|webp|ttf|woff|woff2)$/,
         include: /src\/fonts/,
+        exclude: /src\/images/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]"
+          }
+        }
+      },
+      {
+        test: /\.(ico|jpg|jpeg|png|gif)$/,
+        include: /src\/images/,
+        exclude: /src\/fonts/,
         use: {
           loader: "file-loader",
           options: {

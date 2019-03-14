@@ -4,8 +4,8 @@ import * as PropTypes from "prop-types";
 
 import "./Button.scss";
 
-// import Arrow from "../../images/icons/arrows/arrow-right.svg";
-// import Chevron from "../../images/icons/arrows/chevron-right.svg";
+import Arrow from "../../images/icons/arrows/arrow-right.svg";
+import Chevron from "../../images/icons/arrows/chevron-right.svg";
 
 const propTypes = {
   as: PropTypes.oneOf(["button", "anchor"]),
@@ -14,6 +14,7 @@ const propTypes = {
   disabled: PropTypes.bool,
   href: PropTypes.string,
   icon: PropTypes.oneOf(["arrow", "chevron"]),
+  icon_placement: PropTypes.oneOf(["arrow", "chevron"]),
   onChange: PropTypes.func,
   priority: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
   small: PropTypes.bool
@@ -23,6 +24,7 @@ const defaultProps = {
   as: "button",
   disabled: false,
   icon: "chevron",
+  icon_placement: "left",
   priority: "primary"
 };
 
@@ -32,6 +34,8 @@ class Button extends React.Component {
   }
 
   render() {
+    console.log(Arrow);
+
     let commonProps = {
       onClick: this.props.onClick,
       disabled: this.props.disabled,
@@ -43,14 +47,14 @@ class Button extends React.Component {
     const button = (
       <button {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        {/* <Chevron /> */}
+        <Chevron />
       </button>
     );
 
     const anchor = (
       <a href={this.props.href} {...commonProps}>
         <span className="btn__text">{this.props.children}</span>
-        {/* <Chevron /> */}
+        <Chevron />
       </a>
     );
 
