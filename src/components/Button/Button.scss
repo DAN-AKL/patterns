@@ -16,7 +16,6 @@
   svg {
     fill: currentColor;
     height: 6rem;
-    margin-left: 4rem;
     margin-top: 0;
     width: 6rem;
   }
@@ -25,6 +24,14 @@
 .btn__text {
   flex-shrink: 1;
   flex-grow: 0;
+
+  & + svg {
+    margin-left: 4rem;
+  }
+
+  svg + & {
+    margin-left: 3rem;
+  }
 }
 
 .btn--small {
