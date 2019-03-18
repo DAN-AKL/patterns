@@ -1,6 +1,11 @@
 import React from "react";
 
 import Button from "./Button.jsx";
+
+import Arrow from "../../images/icons/arrows/arrow-right.svg";
+import Chevron from "../../images/icons/arrows/chevron-right.svg";
+import Menu from "../../images/icons/basic/menu.svg";
+
 import { storiesOf } from "@storybook/react";
 import {
   withKnobs,
@@ -26,6 +31,25 @@ const as = {
   Anchor: "anchor"
 };
 
+const icons = {
+  None: "",
+  Arrow: "Arrow",
+  Chevron: "Chevron",
+  Menu: "Menu"
+};
+
+const icon_map = {
+  None: "",
+  Arrow: <Arrow />,
+  Chevron: <Chevron />,
+  Menu: <Menu />
+};
+
+const icon_placements = {
+  Before: "before",
+  After: "after"
+};
+
 stories.add("Default", () => {
   return (
     <>
@@ -34,9 +58,11 @@ stories.add("Default", () => {
         as={select("As", as, "button")}
         small={boolean("Small", false)}
         disabled={boolean("Disabled", false)}
+        icon={icon_map[select("Icon", icons, "")]}
+        icon_placement={select("Icon placement", icon_placements, "after")}
         onClick={action("Button click")}
       >
-        I am a Button
+        {text("Button text", "I am a Button")}
       </Button>
     </>
   );
