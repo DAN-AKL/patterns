@@ -28,43 +28,50 @@ class Button extends React.Component {
     super(props);
   }
 
-  render() {
-    let commonProps = {
+  common_props() {
+    return {
       onClick: this.props.onClick,
       disabled: this.props.disabled,
       className: `btn btn--${this.props.priority} ${
         this.props.small ? "btn--small" : ""
       }`
     };
+  }
 
-    const button = (
-      <button {...commonProps}>
+  common_markup() {
+    return (
+      <>
         {this.props.icon_placement === "before" && this.props.icon}
-
         <span className="btn__text">{this.props.children}</span>
-
         {this.props.icon_placement === "after" && this.props.icon}
-      </button>
+      </>
     );
+  }
 
-    const anchor = (
-      <a href={this.props.href} {...commonProps}>
-        <span className="btn__text">{this.props.children}</span>[
-        {this.props.icon}]
+  button_markup() {
+    return <button {...this.common_props()}>{this.common_markup()}</button>;
+  }
+
+  anchor_markup() {
+    return (
+      <a href={this.props.href} {...this.common_props()}>
+        {this.common_markup()}
       </a>
     );
+  }
 
+  render() {
     switch (this.props.as) {
       case "anchor":
-        return anchor;
+        return this.anchor_markup();
         break;
 
       case "button":
-        return button;
+        return this.button_markup();
         break;
 
       default:
-        return button;
+        return this.button_markup();
     }
   }
 }
