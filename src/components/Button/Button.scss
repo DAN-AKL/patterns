@@ -24,6 +24,7 @@
 .btn__text {
   flex-shrink: 1;
   flex-grow: 0;
+  margin-top: 0;
 
   & + svg {
     margin-left: 4rem;

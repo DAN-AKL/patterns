@@ -32,7 +32,7 @@ class Button extends React.Component {
     return {
       onClick: this.props.onClick,
       disabled: this.props.disabled,
-      className: `btn btn--${this.props.priority} ${
+      className: `btn btn--${this.props.priority} ${this.props.className} ${
         this.props.small ? "btn--small" : ""
       }`
     };
