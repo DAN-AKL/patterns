@@ -1,0 +1,41 @@
+@import "../../sass/variables";
+
+.breadcrumb {
+  font-size: 3rem;
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb__item {
+  text-transform: uppercase;
+  font-weight: 800;
+
+  &:last-child {
+    font-weight: 400;
+  }
+
+  & + & {
+    margin-left: 4rem;
+
+    &:before {
+      content: "/";
+      margin-right: 4rem;
+    }
+  }
+}
+
+.breadcrumb__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
