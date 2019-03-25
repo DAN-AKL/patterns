@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a quote component 1`] = `
+<blockquote
+  className="quote"
+>
+  <p
+    className="quote__text"
+  >
+    DAN was awesome during our project, I thoroughly enjoyed working with them. Everyone should use them.
+  </p>
+  <cite
+    className="quote__citation"
+  >
+    <span
+      className="quote__name"
+    >
+      Sarah Lastname
+    </span>
+    <span
+      className="quote__role"
+    >
+      Auckland Company Ltd
+    </span>
+  </cite>
+</blockquote>
+`;
