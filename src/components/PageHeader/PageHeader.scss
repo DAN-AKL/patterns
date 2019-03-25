@@ -1,0 +1,57 @@
+@import "../../sass/variables";
+
+.page-header {
+  display: flex;
+  margin-top: 0;
+  padding: 24rem 8rem;
+}
+
+.page-header__container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 300rem;
+}
+
+.page-header__title {
+  font-size: 16rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  max-width: 140rem;
+
+  @media (min-width: 1000px) {
+    font-size: 20rem;
+    margin-top: 16rem;
+  }
+}
+
+.page-header--dark {
+  background-color: $tbwa-black;
+  color: $tbwa-grey;
+}
+
+.page-header--light {
+  background-color: $tbwa-white;
+  color: $tbwa-black;
+}
+
+.page-header--bright {
+  background-color: $tbwa-yellow;
+  color: $tbwa-black;
+
+  ::selection {
+    background-color: $tbwa-white;
+    color: $tbwa-black;
+  }
+
+  a:hover {
+    color: $tbwa-white;
+  }
+}
+
+.page-header--grey {
+  background-color: $tbwa-grey;
+  color: $tbwa-black;
+}

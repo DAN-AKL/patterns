@@ -17,19 +17,23 @@ class Breadcrumb extends React.Component {
     return (
       <div className="breadcrumb">
         <ol className="breadcrumb__list">
-          {this.props.items.map(item => {
-            return (
-              <li className="breadcrumb__item">
-                {item.href && (
-                  <a href={item.href} className="breadcrumb__link">
-                    {item.label}
-                  </a>
-                )}
+          {this.props.items && (
+            <>
+              {this.props.items.map(item => {
+                return (
+                  <li className="breadcrumb__item">
+                    {item.href && (
+                      <a href={item.href} className="breadcrumb__link">
+                        {item.label}
+                      </a>
+                    )}
 
-                {!item.href && <>{item.label}</>}
-              </li>
-            );
-          })}
+                    {!item.href && <>{item.label}</>}
+                  </li>
+                );
+              })}
+            </>
+          )}
         </ol>
       </div>
     );
