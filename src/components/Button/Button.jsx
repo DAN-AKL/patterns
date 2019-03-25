@@ -80,5 +80,6 @@ class Button extends React.Component {
 }
 
 Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
 
 export default Button;
