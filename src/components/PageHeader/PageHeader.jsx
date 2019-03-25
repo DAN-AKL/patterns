@@ -4,7 +4,16 @@ import Breadcrumb from "../Breadcrumb/Breadcrumb.jsx";
 
 import "./PageHeader.scss";
 
-const propTypes = {};
+const propTypes = {
+  title: PropTypes.string.isRequired,
+  intro: PropTypes.string,
+  breadcrumb_items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      href: PropTypes.string
+    })
+  )
+};
 
 class PageHeader extends React.Component {
   render() {
