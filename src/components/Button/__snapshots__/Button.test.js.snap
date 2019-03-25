@@ -1,5 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders a button using the default props 1`] = `
+<button
+  className="
+        btn
+        btn--primary
+        
+        
+      "
+  disabled={false}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
+exports[`renders a button with an icon after the text 1`] = `
+<button
+  className="
+        btn
+        btn--primary
+        
+        
+      "
+  disabled={false}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+  <svg
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15.8198039,12 L21.2037682,12 L12,22.5185923"
+    />
+  </svg>
+</button>
+`;
+
+exports[`renders a button with an icon before the text 1`] = `
+<button
+  className="
+        btn
+        btn--primary
+        
+        
+      "
+  disabled={false}
+>
+  <svg
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M15.8198039,12 L21.2037682,12 L12,22.5185923"
+    />
+  </svg>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
+exports[`renders a disabled button 1`] = `
+<button
+  className="
+        btn
+        btn--primary
+        
+        
+      "
+  disabled={true}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
 exports[`renders a primary anchor 1`] = `
 <a
   className="
@@ -8,6 +94,7 @@ exports[`renders a primary anchor 1`] = `
         
         
       "
+  disabled={false}
 >
   <span
     className="btn__text"
@@ -25,6 +112,7 @@ exports[`renders a primary button 1`] = `
         
         
       "
+  disabled={false}
 >
   <span
     className="btn__text"
@@ -42,6 +130,7 @@ exports[`renders a seconadry anchor 1`] = `
         
         
       "
+  disabled={false}
 >
   <span
     className="btn__text"
@@ -59,6 +148,61 @@ exports[`renders a seconadry button 1`] = `
         
         
       "
+  disabled={false}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
+exports[`renders a small button 1`] = `
+<button
+  className="
+        btn
+        btn--primary
+        
+        btn--small
+      "
+  disabled={false}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
+exports[`renders a tertiary anchor 1`] = `
+<a
+  className="
+        btn
+        btn--tertiary
+        
+        
+      "
+  disabled={false}
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</a>
+`;
+
+exports[`renders a tertiary button 1`] = `
+<button
+  className="
+        btn
+        btn--tertiary
+        
+        
+      "
+  disabled={false}
 >
   <span
     className="btn__text"
