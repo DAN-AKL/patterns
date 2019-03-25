@@ -16,7 +16,7 @@ import {
 } from "@storybook/addon-knobs";
 
 import { action } from "@storybook/addon-actions";
-import figmaDecorator from "storybook-addon-figma";
+// import figmaDecorator from "storybook-addon-figma";
 
 const stories = storiesOf("Button", module);
 
@@ -70,8 +70,8 @@ stories.add("Default", () => {
   );
 });
 
-stories.addDecorator(
-  figmaDecorator({
-    url: "https://www.figma.com/file/HNFG8Ity5edIXgd0pp4mCvpP/Buttons"
-  })
-);
+// stories.addDecorator(
+//   figmaDecorator({
+//     url: "https://www.figma.com/file/HNFG8Ity5edIXgd0pp4mCvpP/Buttons"
+//   })
+// );
