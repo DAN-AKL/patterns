@@ -24,6 +24,7 @@ class PageHeader extends React.Component {
             <Breadcrumb items={this.props.breadcrumb_items} />
           )}
           <h1 className="page-header__title">{this.props.title}</h1>
+          {this.props.intro && <p className="intro">{this.props.intro}</p>}
         </div>
       </header>
     );
