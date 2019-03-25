@@ -39,7 +39,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "<rootDir>/___mocks___/SassStub.js"
+      "^.+\\.(css|scss)$": "<rootDir>/___mocks___/SassStub.js",
+      "^.+\\.(svg)$": "<rootDir>/___mocks___/SvgStub.js"
     }
   }
 }
