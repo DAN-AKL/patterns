@@ -1,10 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`renders a primary anchor 1`] = `
+<a
+  className="
+        btn
+        btn--primary
+        
+        
+      "
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</a>
+`;
+
+exports[`renders a primary button 1`] = `
 <button
   className="
         btn
         btn--primary
+        
+        
+      "
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</button>
+`;
+
+exports[`renders a seconadry anchor 1`] = `
+<a
+  className="
+        btn
+        btn--secondary
+        
+        
+      "
+>
+  <span
+    className="btn__text"
+  >
+    I am a button
+  </span>
+</a>
+`;
+
+exports[`renders a seconadry button 1`] = `
+<button
+  className="
+        btn
+        btn--secondary
         
         
       "
