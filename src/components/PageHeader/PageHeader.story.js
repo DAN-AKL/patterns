@@ -2,6 +2,8 @@ import React from "react";
 
 import PageHeader from "./PageHeader.jsx";
 
+import Markdown from "./README.md";
+
 import { storiesOf } from "@storybook/react";
 import {
   withKnobs,
@@ -34,12 +36,19 @@ const breadcrumb_items = [
   }
 ];
 
-stories.add("Default", () => {
-  return (
-    <PageHeader
-      theme={select("Theme", themes, "bright")}
-      breadcrumb_items={breadcrumb_items}
-      title="Not just new tools – it’s a whole new way of working"
-    />
-  );
-});
+stories
+  .addParameters({
+    info: {
+      text: Markdown,
+      inline: false
+    }
+  })
+  .add("Default", () => {
+    return (
+      <PageHeader
+        theme={select("Theme", themes, "bright")}
+        breadcrumb_items={breadcrumb_items}
+        title="Not just new tools – it’s a whole new way of working"
+      />
+    );
+  });

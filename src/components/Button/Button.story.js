@@ -1,6 +1,7 @@
 import React from "react";
 
 import Button from "./Button.jsx";
+import Markdown from "./README.md";
 
 import Arrow from "../../images/icons/arrows/arrow-right.svg";
 import Chevron from "../../images/icons/arrows/chevron-right.svg";
@@ -52,9 +53,15 @@ const icon_placements = {
   After: "after"
 };
 
-stories.add("Default", () => {
-  return (
-    <>
+stories
+  .addParameters({
+    info: {
+      text: Markdown,
+      inline: false
+    }
+  })
+  .add("Default", () => {
+    return (
       <Button
         priority={select("Priority", priorities, "primary")}
         as={select("As", as, "button")}
@@ -66,9 +73,8 @@ stories.add("Default", () => {
       >
         {text("Button text", "I am a Button")}
       </Button>
-    </>
-  );
-});
+    );
+  });
 
 // stories.addDecorator(
 //   figmaDecorator({

@@ -71,6 +71,13 @@ module.exports = ({ config, mode }) => {
           name: "[name].[ext]"
         }
       }
+    },
+    {
+      test: /\.md$/,
+
+      use: {
+        loader: "raw-loader"
+      }
     }
   ];
 
