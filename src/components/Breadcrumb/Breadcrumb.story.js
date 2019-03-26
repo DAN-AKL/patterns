@@ -15,7 +15,7 @@ import {
 
 import { action } from "@storybook/addon-actions";
 
-const stories = storiesOf("Breadcrumb", module);
+const stories = storiesOf("Components/Breadcrumb", module);
 
 stories.addDecorator(withKnobs);
 

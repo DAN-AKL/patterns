@@ -9,7 +9,7 @@ import notes from "./README.md";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text } from "@storybook/addon-knobs";
 
-const stories = storiesOf("Poster", module);
+const stories = storiesOf("Components/Poster", module);
 
 stories.addDecorator(withKnobs);
 

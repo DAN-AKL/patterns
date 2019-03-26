@@ -19,7 +19,7 @@ import {
 import { action } from "@storybook/addon-actions";
 // import figmaDecorator from "storybook-addon-figma";
 
-const stories = storiesOf("Button", module);
+const stories = storiesOf("Components/Button", module);
 
 stories.addDecorator(withKnobs);
 

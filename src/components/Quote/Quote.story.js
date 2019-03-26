@@ -6,7 +6,7 @@ import { withKnobs, text } from "@storybook/addon-knobs";
 
 import notes from "./README.md";
 
-const stories = storiesOf("Quote", module);
+const stories = storiesOf("Components/Quote", module);
 
 stories.addDecorator(withKnobs);
 

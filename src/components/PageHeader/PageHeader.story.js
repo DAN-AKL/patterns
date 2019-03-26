@@ -15,7 +15,7 @@ import {
 
 import { action } from "@storybook/addon-actions";
 
-const stories = storiesOf("Page Header", module);
+const stories = storiesOf("Components/Page Header", module);
 
 stories.addDecorator(withKnobs);
 

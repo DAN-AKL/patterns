@@ -15,7 +15,7 @@ import {
   select
 } from "@storybook/addon-knobs";
 
-const stories = storiesOf("Bento", module);
+const stories = storiesOf("Components/Bento", module);
 
 stories.addDecorator(withKnobs);
 
