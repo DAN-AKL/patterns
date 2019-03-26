@@ -2,7 +2,7 @@ import React from "react";
 
 import PageHeader from "./PageHeader.jsx";
 
-import Markdown from "./README.md";
+import notes from "./README.md";
 
 import { storiesOf } from "@storybook/react";
 import {
@@ -36,14 +36,9 @@ const breadcrumb_items = [
   }
 ];
 
-stories
-  .addParameters({
-    info: {
-      text: Markdown,
-      inline: false
-    }
-  })
-  .add("Default", () => {
+stories.add(
+  "Default",
+  () => {
     return (
       <PageHeader
         theme={select("Theme", themes, "bright")}
@@ -51,4 +46,6 @@ stories
         title="Not just new tools – it’s a whole new way of working"
       />
     );
-  });
+  },
+  { notes: notes }
+);

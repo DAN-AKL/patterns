@@ -4,7 +4,7 @@ import Bento from "./Bento.jsx";
 import BentoItem from "./BentoItem.jsx";
 import BentoHeader from "./BentoHeader.jsx";
 
-import Markdown from "./README.md";
+import notes from "./README.md";
 
 import { storiesOf } from "@storybook/react";
 import {
@@ -43,14 +43,9 @@ const spacings = {
   Compact: "compact"
 };
 
-stories
-  .addParameters({
-    info: {
-      text: Markdown,
-      inline: true
-    }
-  })
-  .add("Default", () => {
+stories.add(
+  "Default",
+  () => {
     var theme = select("Theme", themes, "light");
     var layout = select("Layout", layouts, "twoup");
     var spacing = select("Spacing", spacings, "standard");
@@ -127,4 +122,6 @@ stories
         )}
       </Bento>
     );
-  });
+  },
+  { notes: notes }
+);

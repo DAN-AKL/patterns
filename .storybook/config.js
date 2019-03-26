@@ -10,7 +10,6 @@ addParameters({
   }
 });
 
-addDecorator(withInfo);
 addDecorator(story => <Container story={story} />);
 
 // automatically import all files ending in *.story.js

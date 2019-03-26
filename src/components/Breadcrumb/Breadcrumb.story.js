@@ -1,6 +1,6 @@
 import React from "react";
 
-import Markdown from "./README.md";
+import notes from "./README.md";
 
 import Breadcrumb from "./Breadcrumb.jsx";
 
@@ -33,13 +33,10 @@ const items = [
   }
 ];
 
-stories
-  .addParameters({
-    info: {
-      text: Markdown,
-      inline: false
-    }
-  })
-  .add("Default", () => {
+stories.add(
+  "Default",
+  () => {
     return <Breadcrumb items={items} />;
-  });
+  },
+  { notes: notes }
+);
