@@ -30,6 +30,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^5.0.5",
     "@storybook/addon-info": "^5.0.5",
     "@storybook/addon-notes": "^5.0.5",
     "css-loader": "^2.1.0",
