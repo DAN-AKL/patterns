@@ -8,6 +8,7 @@ import "./Poster.scss";
 const propTypes = {
   blurb: PropTypes.string,
   image: PropTypes.string.isRequired,
+  image_description: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired
 };
@@ -19,7 +20,10 @@ class Poster extends React.Component {
         <a className="poster__link" href={this.props.url}>
           <div className="poster__image">
             <figure>
-              <LazyImage src={this.props.image} />
+              <LazyImage
+                src={this.props.image}
+                alt={this.props.image_description}
+              />
             </figure>
           </div>
           <h2 className="poster__title">{this.props.title}</h2>
