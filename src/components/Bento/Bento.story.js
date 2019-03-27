@@ -79,13 +79,21 @@ stories.add(
           layout === "gallery-full-bleed" ||
           layout === "gallery-overlay") && (
           <BentoItem>
-            <img src="https://placeimg.com/1280/600/any" width="100%" />
+            <img
+              src="https://placeimg.com/1280/600/any"
+              width="100%"
+              alt="A placeholder from placeimg.com that could literally be anything."
+            />
           </BentoItem>
         )}
 
         {layout === "gallery-overlay" && (
           <BentoItem>
-            <img src="https://placeimg.com/1280/600/any" width="100%" />
+            <img
+              src="https://placeimg.com/1280/600/any"
+              width="100%"
+              alt="A placeholder from placeimg.com that could literally be anything."
+            />
           </BentoItem>
         )}
 
