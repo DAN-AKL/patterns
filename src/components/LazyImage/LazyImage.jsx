@@ -45,6 +45,7 @@ class LazyImage extends React.Component {
     return (
       <img
         data-src={this.props.src}
+        alt={this.props.alt}
         className={this.props.className}
         ref={this.imageRef}
       />
