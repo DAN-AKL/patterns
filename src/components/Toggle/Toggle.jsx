@@ -17,25 +17,29 @@ class Toggle extends React.Component {
   }
 
   triggerToggle(e) {
-    this.setState({
-      toggle: !this.state.toggle
-    });
+    if (!this.props.value) {
+      this.setState({
+        toggle: !this.state.toggle
+      });
+    }
+
+    this.props.onToggle();
   }
 
   render() {
     return (
-      <>
-        <button onClick={this.triggerToggle}>Toggle</button>
+      <div className="toggle">
+        <button onClick={this.triggerToggle}>Menu</button>
         <div
           className={
-            this.state.toggle
+            this.props.value
               ? this.props.toggle_on_class
               : this.props.toggle_off_class
           }
         >
           {this.props.children}
         </div>
-      </>
+      </div>
     );
   }
 }
