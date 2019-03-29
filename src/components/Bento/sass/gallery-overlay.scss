@@ -1,19 +1,25 @@
 .bento__layout--gallery-overlay {
   @supports (grid-gap: 1px) {
-    @media (min-width: 700px) {
-      rows: 25% 25% 25% 25%;
-    }
+    // @media (min-width: 700px) {
+    //   rows: 25% 25% 25% 25%;
+    // }
   }
 
   .bento__item {
+    margin-top: 0;
+
+    img {
+      width: 100%;
+    }
+
     &:nth-child(2n - 1) {
       grid-column: 5 / 13;
-      grid-row: 1 / 4;
+      // grid-row: 1 / 4;
     }
 
     &:nth-child(2n) {
-      grid-column: 1 / 7;
-      grid-row: 3 / 5;
+      grid-column: 3 / 9;
+      // grid-row: 3 / 5;
     }
   }
 }
