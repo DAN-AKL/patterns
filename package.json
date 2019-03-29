@@ -8,7 +8,9 @@
     "deploy": "yarn build && yarn publish",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "component:generate": "./scripts/generate-component.sh",
+    "component:remove": "./scripts/remove-component.sh $1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
