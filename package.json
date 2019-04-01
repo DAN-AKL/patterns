@@ -41,6 +41,7 @@
     "raw-loader": "^2.0.0",
     "react-test-renderer": "^16.8.5",
     "sass-loader": "^7.1.0",
+    "shortid": "^2.2.14",
     "storybook-addon-figma": "^0.1.0"
   },
   "jest": {

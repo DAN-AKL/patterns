@@ -1,0 +1,11 @@
+.form-field {
+  display: block;
+
+  & + & {
+    margin-top: 4rem;
+  }
+}
+
+.form-field__input {
+  margin-top: 0;
+}

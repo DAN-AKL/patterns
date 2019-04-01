@@ -29,7 +29,9 @@ class Toggle extends React.Component {
   render() {
     return (
       <div className="toggle">
-        <button onClick={this.triggerToggle}>Menu</button>
+        <button className="toggle__trigger" onClick={this.triggerToggle}>
+          Menu
+        </button>
         <div
           className={
             this.props.value
